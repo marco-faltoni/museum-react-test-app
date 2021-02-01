@@ -7,6 +7,8 @@ import GalleryDetails from "../components/GalleryDetails";
 import {ActivityContext} from '../dataContext';
 // animation
 import {motion, AnimatePresence, AnimateSharedLayout} from 'framer-motion';
+import {slideDown} from '../animation';
+import {fadeIn} from '../animation';
 import {useLocation} from 'react-router-dom';
 
 const Home = () => {
@@ -30,20 +32,22 @@ const Home = () => {
     // },[]);
     
     return (
-        <div className="grid">
+        <motion.div variants={fadeIn} initial='hidden' animate='show' className="grid">
             <Nav/>
-            
-            <div className="gallery">
-                {dataDetail && (
-                    <AnimatePresence> {pathID && <GalleryDetails pathID={pathID} setData={setdataDetail} />} </AnimatePresence>
-                )}              
+            <motion.h1 variants={slideDown} initial='hidden' animate='show' className="title-filter">TITLE</motion.h1>
+            <AnimateSharedLayout>
+            {dataDetail && (
+                <AnimatePresence> {pathID && <GalleryDetails pathID={pathID} setData={setdataDetail} />} </AnimatePresence>
+            )} 
+            <motion.div className="gallery" layout>             
                 {activities.map((exhibit)=> {
                     return <Gallery name={exhibit.name} released={exhibit.date} id={exhibit.id} cover={exhibit.cover} image={exhibit.images} key={exhibit.id} setData={setdataDetail}/> 
                 })}
 
-            </div>
-            <h3 className="load">Load More</h3>
-        </div>
+            </motion.div>
+            <motion.h3 className="load">Load More</motion.h3>
+            </AnimateSharedLayout>
+        </motion.div>
     );
 };
 

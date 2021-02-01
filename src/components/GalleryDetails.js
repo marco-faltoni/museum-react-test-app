@@ -17,8 +17,10 @@ const GalleryDetails = ({pathID, setData}) => {
         
         if (element.classList.contains('exit')) {
             // document.body.style.overflow = 'auto';
-            console.log('enter');
-            setData(false);
+            // console.log('enter');
+            setTimeout(() => {
+                setData(false);
+            }, 500);
             history.push('/');
         }
     };
@@ -26,7 +28,9 @@ const GalleryDetails = ({pathID, setData}) => {
     return (
         <>
             {clicked.map((exhibit)=> (
-                <div layoutId={pathID} className="details" key={pathID}>
+                <motion.div initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }} className="details" key={pathID}>
                     <div className="title">
                         <h1> {exhibit.name}</h1>
                         <img className="exit" onClick={exitHandler} src={close} alt="close"/>
@@ -44,7 +48,7 @@ const GalleryDetails = ({pathID, setData}) => {
                     <div className="dot">
 
                     </div>
-                </div>
+                </motion.div>
             ))}
         </>
     )
