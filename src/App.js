@@ -1,8 +1,8 @@
 import React from 'react';
 // import Context
-import {ActivityProvider} from './dataContext';
+import {ActivityProvider, ClickedProvider} from './dataContext';
 //Router
-import { Switch, Route, useLocation } from "react-router-dom";
+import { Route } from "react-router-dom";
 // import styles
 import "./style/app.scss";
 //Import Pages
@@ -15,18 +15,15 @@ import { AnimatePresence } from "framer-motion";
 
 function App() {
 
-  const location = useLocation();
-
-
   return (
     <div className="App">
-      <Switch location={location} key={location.pathname}>
-        <Route path="/" exact>
-        <ActivityProvider>
-          <Home/>
-        </ActivityProvider>
+        <Route path={['/exhibition/:id', '/']}>
+          <ActivityProvider>
+            <ClickedProvider>
+              <Home/>
+            </ClickedProvider>
+          </ActivityProvider>
         </Route>
-      </Switch>
     </div>
   );
 }

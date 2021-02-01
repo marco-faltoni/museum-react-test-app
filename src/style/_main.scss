@@ -92,6 +92,57 @@
     }
 }
 
+.details {
+    background-color: #232323;
+    color: white;
+    min-height: 100vh;
+    position: absolute;
+    z-index: 30;
+    top: 50%;
+    left: 0;
+    transform: translate(0%, 50%);
+    flex-direction: column;
+    width: 100%;
+    padding-left: 5rem;
+    padding-top: 5rem;
+    .title {
+        text-transform: uppercase;
+        display: flex;
+        justify-content: space-between;
+        padding-right: 5rem;
+        h1 {
+            font-size: 48px;
+            font-weight: 400;
+        }
+        img {
+            height: 30px;
+        }
+    }
+    .text {
+        width: 50%;
+        margin-bottom: 4rem;
+        h3 {
+            color: #FFFFFF;
+            opacity: 0.5;
+            font-size: 26px;
+            line-height: 140%;
+        }
+    }
+    .images {
+        display: flex;
+        overflow: hidden;
+        img {
+            display: inline-block;
+            width: 30%;
+        }
+        .cov {
+            width: 70%;
+            margin-right: 4rem;
+        }
+
+    }
+}
+
 
 // Animation
 @keyframes slideUp {
