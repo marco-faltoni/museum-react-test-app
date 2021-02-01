@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    &::-webkit-scrollbar {
+        width: 0.5rem;
+        @media (max-width: 1199px) {
+            display: none;
+        }
+    }
+    &::-webkit-scrollbar-thumb {
+        background-color: darkgrey;
+        @media (max-width: 1199px) {
+            display: none;
+        }
+    }
+    &::-webkit-scrollbar-track {
+        background: whitesmoke;
+        @media (max-width: 1199px) {
+            display: none;
+        }
+    }
+    
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+    width: 100%;
+    background-color: #FCF9F1;
+}
+
+@import './nav';
+@import './main';
+@import './footer';
