@@ -22,7 +22,8 @@ const Nav = () => {
                     <li>
                         Cosa Vedere
                     </li>
-                    <li>
+                    <li >
+                        <span className="active"></span>
                         Chi Siamo
                     </li>
                     <li>

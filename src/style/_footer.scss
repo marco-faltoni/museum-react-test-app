@@ -1,0 +1,77 @@
+.container-footer {
+    background-color: #030909;
+    .foot-top {
+        color: white;
+        display: flex;
+        
+        .foot-left {
+            padding: 5rem 5rem;
+            width: 70%;
+            display: flex;
+            .fiat {
+                width: 73px;
+                height: 73px;
+                margin-top: 3rem;
+            }
+            .social {
+                transform: translate(-10%, 40%);
+            }
+            .partner, .main-contact {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                h2 {
+                    font-size: 32px;
+                    line-height: 40px;
+                }
+                #ptag {
+                    text-decoration: underline;
+                }
+                ul {
+                    list-style: none;
+                    li {
+                        font-size: 15px;
+                        
+                    }
+                    .some {
+                        line-height: 250%;
+                        font-size: 22px;
+                    }
+                }
+            }
+            .main-contact{
+                justify-content: flex-end;
+            }
+        }
+        .foot-right {
+            padding: 5rem 2rem;
+            background-color: #1d1d1d;
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            h2 {
+                font-size: 32px;
+                font-weight: 400;
+                line-height: 130%;  
+            }
+            #news {
+                text-decoration: underline;
+            }
+            h4 {
+                opacity: 0.5;
+            }
+        }
+    }
+    .foot-bottom {
+        background-color: #D6001C;
+        padding: 2rem 5rem;
+        display: flex;
+        justify-content: space-between;
+        h4 {
+            font-weight: 400;
+        }
+    }
+}

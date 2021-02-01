@@ -2,7 +2,9 @@ import React, {useContext} from 'react';
 // import Context
 import {ClickedContext} from '../dataContext';
 // style and animation
-import close from '../img/close.svg'
+import close from '../img/close.svg';
+import dotActive from '../img/dot-active.svg';
+import dot from '../img/dot.svg';
 import {motion} from 'framer-motion';
 import {useHistory} from 'react-router-dom';
 
@@ -46,7 +48,10 @@ const GalleryDetails = ({pathID, setData}) => {
                     </div>
 
                     <div className="dot">
-
+                        <img src={dotActive} alt=""/>
+                        <img src={dot} alt=""/>
+                        <img src={dot} alt=""/>
+                        <img src={dot} alt=""/>
                     </div>
                 </motion.div>
             ))}

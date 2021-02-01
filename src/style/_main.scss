@@ -24,6 +24,9 @@
     grid-column-gap: 3rem;
     grid-row-gap: 8rem;
     padding: 5rem;
+    @media (max-width: 790px) {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
     .container {
         a {
             text-decoration: none;
@@ -150,7 +153,15 @@
             width: 70%;
             margin-right: 4rem;
         }
-
+    }
+    .dot {
+        display: flex;
+        margin-top: 3rem;
+        img {
+            margin-right: 2rem;
+            width: 20px;
+            height: 20px;
+        }
     }
 }
 

@@ -21,8 +21,10 @@
             display: flex;
             list-style: none;
             align-items: center;
+            
             li {
                 padding-right: 5rem;
+                position: relative;
                 color:  #F1EEE5;
                 font-size: 21px;
                 line-height: 92.9%;
@@ -31,7 +33,7 @@
                     display: flex;
                     color: #FFFFFF;
                     background-color: #D6001C;
-                    padding: 1.5rem 1rem;
+                    padding: 1.5rem 2rem;
                     h2 {
                         font-size: 25px;
                     }
@@ -41,7 +43,17 @@
                         margin-left: 2rem;
                     }
                 }
+                .active {
+                    height: 0.3rem;
+                    background: #ffffff;
+                    width: 58%;
+                    position: absolute;
+                    bottom: -77%;
+                    left: 0%;
+                    z-index: 1;
+                }
             }
+            
         }
     }
     .jumbo {

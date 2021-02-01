@@ -1,6 +1,7 @@
 import React, {useState, useContext, useEffect} from "react";
 // import components
 import Nav from "../components/Nav";
+import Footer from "../components/Footer";
 import Gallery from "../components/GalleryGrid";
 import GalleryDetails from "../components/GalleryDetails";
 // import Context
@@ -32,6 +33,8 @@ const Home = () => {
     // },[]);
     
     return (
+        <>
+        
         <motion.div variants={fadeIn} initial='hidden' animate='show' className="grid">
             <Nav/>
             <motion.h1 variants={slideDown} initial='hidden' animate='show' className="title-filter">TITLE</motion.h1>
@@ -47,7 +50,10 @@ const Home = () => {
             </motion.div>
             <motion.h3 className="load">Load More</motion.h3>
             </AnimateSharedLayout>
+            
         </motion.div>
+        <Footer/>
+        </>
     );
 };
 
