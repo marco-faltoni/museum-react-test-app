@@ -1,12 +1,7 @@
 import React from "react";
-// import routing
-import { Link } from "react-router-dom";
-import { useLocation } from "react-router-dom";
 import fb from "../img/fb.svg"
 import ig from "../img/ig.svg"
 import tw from "../img/twit.svg"
-// animation
-import { motion } from "framer-motion";
 
 const Nav = () => {
     // const { pathname } = useLocation();

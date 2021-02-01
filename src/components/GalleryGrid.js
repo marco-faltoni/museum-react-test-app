@@ -1,7 +1,7 @@
 import React, {useContext, useState} from 'react';
 // animation
-import {motion, useCycle, AnimatePresence, AnimateSharedLayout} from 'framer-motion';
-import {slideUp, slideDown} from '../animation';
+import {motion} from 'framer-motion';
+import {slideDown} from '../animation';
 import {Link} from 'react-router-dom';
 import {resizeImg} from '../util';
 // import Context
@@ -14,7 +14,6 @@ const Gallery = ({name, released, cover, image, id, setData}) => {
 
     const [activities, setActivities] = useContext(ActivityContext);
     const [clicked, setClicked] = useContext(ClickedContext);
-    const [isOpen, toggleOpen] = useCycle(false, true);
 
     const detailHandler = () => {
         

@@ -8,9 +8,6 @@ import "./style/app.scss";
 //Import Pages
 import Home from "./pages/Home";
 
-//Animation
-import { AnimatePresence } from "framer-motion";
-
 
 
 function App() {
