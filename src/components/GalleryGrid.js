@@ -21,9 +21,13 @@ const Gallery = ({name, released, cover, image, id, setData}) => {
             activity.id === id
         ));
         setData(true);
-        // scrollo al top del container
-        let scrollDiv = document.querySelector(".container").offsetTop;
-        window.scrollTo({ top: scrollDiv-30, behavior: 'smooth'});
+
+        setTimeout(() => {
+            // scrollo al top del container
+            let scrollDiv = document.querySelector(".details").offsetTop;
+            window.scrollTo({ top: scrollDiv, behavior: 'smooth'});
+        }, 100);
+        
     }
 
     return (
